@@ -13,6 +13,8 @@ public class Programa {
 		Persona persona = (Persona) context.getBean("persona");
 		persona.hablar();
 		
+		System.out.println(persona);
+		
 		((ClassPathXmlApplicationContext)context).close();
 
 	}

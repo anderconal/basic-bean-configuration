@@ -3,8 +3,23 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
 	<bean 
 		id="persona" 
-		class="es.anderconal.modelo.Persona"></bean>
+		class="es.anderconal.modelo.Persona">
+		
+		<constructor-arg 
+			value="1" 
+			index="0" 
+			name="id" 
+			type="int">
+		</constructor-arg>
+		
+		<constructor-arg 
+			value="Ander Conal" 
+			index="1" 
+			name="nombre"
+			type="String">
+		</constructor-arg>
+		
+	</bean>
 </beans>
