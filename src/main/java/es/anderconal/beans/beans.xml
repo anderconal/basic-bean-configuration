@@ -22,7 +22,11 @@
 		<property 
 			name="taxId"
 			value="123">
-			<!-- <value>321</value> -->
+			<!-- This is another way to set a property 
+				
+			<value>321</value> 
+			
+			-->
 		</property>
 	</bean>
 </beans>
