@@ -14,6 +14,14 @@ public class Persona {
 		this.id = id;
 		this.nombre = nombre;
 	}
+	
+	public void alCrear() {
+		System.out.println("Persona creada: " + this);
+	}
+	
+	public void alDestruir() {
+		System.out.println("Persona destruida: " + this);
+	}
 
 	public void setTaxId(int taxId) {
 		this.taxId = taxId;
