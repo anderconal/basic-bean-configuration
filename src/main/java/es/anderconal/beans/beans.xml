@@ -1,11 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
-	default-init-method="iniciar" default-destroy-method="destruir">
+	default-init-method="iniciar" default-destroy-method="destruir"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="persona" class="es.anderconal.modelo.Persona"
-		scope="singleton" init-method="alCrear" destroy-method="alDestruir"
+	<bean id="persona" 
+		class="es.anderconal.modelo.Persona"
+		scope="singleton" 
+		init-method="alCrear" 
+		destroy-method="alDestruir"
 		factory-method="getInstancia">
 		
 		<constructor-arg 
@@ -39,42 +43,6 @@
 		
 	</bean>
 	
-	<bean id="personaDos" class="es.anderconal.modelo.Persona"
-		scope="singleton" init-method="alCrear" destroy-method="alDestruir"
-		factory-method="crearPersona" lazy-init="true"
-		factory-bean="fabricacionPersona">
-		
-		<constructor-arg 
-			value="2" 
-			index="0" 
-			name="id" 
-			type="int">
-		</constructor-arg>
-		
-		<constructor-arg 
-			value="Conal Ander" 
-			index="1" 
-			name="nombre"
-			type="String">
-		</constructor-arg>
-
-		<property 
-			name="taxId"
-			value="321">
-			<!-- This is another way to set a property 
-				
-			<value>321</value> 
-			
-			-->
-		</property>
-		
-		<property 
-			name="direccion" 
-			ref="direccion">
-		</property>
-		
-	</bean>
-
 	<bean 
 		id="direccion" 
 		class="es.anderconal.modelo.Direccion">
@@ -90,6 +58,14 @@
 		</constructor-arg>
 		
 	</bean>
+	
+	<bean 
+		id="direccionDos" 
+		class="es.anderconal.modelo.Direccion"
+		p:calle="Piruleta, 10"
+		p:codigoPostal="48012">	
+	</bean>
+	
 	<bean id="fabricacionPersona"
 		class="es.anderconal.modelo.FabricacionPersona">
 	</bean>
