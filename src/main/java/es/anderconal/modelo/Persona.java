@@ -15,6 +15,11 @@ public class Persona {
 		this.nombre = nombre;
 	}
 	
+	public static Persona getInstancia(int id, String nombre) {
+		System.out.println("Creando una persona con un método de fabricación.");
+		return new Persona(id, nombre);
+	}
+	
 	public void alCrear() {
 		System.out.println("Persona creada: " + this);
 	}
