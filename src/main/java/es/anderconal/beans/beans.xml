@@ -3,7 +3,8 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="persona" class="es.anderconal.modelo.Persona">
+	<bean id="persona" class="es.anderconal.modelo.Persona"
+		scope="singleton">
 		<constructor-arg 
 			value="1" 
 			index="0" 
@@ -33,7 +34,7 @@
 			ref="direccion">
 		</property>
 	</bean>
-	
+
 	<bean id="direccion" class="es.anderconal.modelo.Direccion">
 		<constructor-arg 
 			name="calle" 

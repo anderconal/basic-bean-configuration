@@ -14,6 +14,13 @@ public class Programa {
 		Persona persona = (Persona) context.getBean("persona");
 		persona.hablar();
 		
+		Persona personaDos = (Persona) context.getBean("persona");
+		personaDos.hablar();
+		persona.setTaxId(111);
+		
+		System.out.println(persona);
+		System.out.println(personaDos);
+		
 		Direccion direccion = (Direccion) context.getBean("direccion");
 		System.out.println(direccion);
 		
