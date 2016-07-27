@@ -5,7 +5,8 @@
 	xmlns:p="http://www.springframework.org/schema/p"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-	<bean id="persona" 
+	<bean 
+		id="persona" 
 		class="es.anderconal.modelo.Persona"
 		scope="singleton" 
 		init-method="alCrear" 
@@ -66,7 +67,8 @@
 		p:codigoPostal="48012">	
 	</bean>
 	
-	<bean id="fabricacionPersona"
+	<bean 
+		id="fabricacionPersona"
 		class="es.anderconal.modelo.FabricacionPersona">
 	</bean>
 </beans>
